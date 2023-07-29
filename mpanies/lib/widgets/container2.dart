@@ -14,12 +14,12 @@ class _Container2State extends State<Container2> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 300.0,
+      height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('images/cosmetics.jpg'),
           fit: BoxFit.cover,
-          colorFilter: ColorFilter.mode(Colors.white.withOpacity(0.5), BlendMode.dstATop),
+          colorFilter: ColorFilter.mode(Color.fromARGB(255, 248, 213, 219).withOpacity(0.5), BlendMode.dstATop),
         ),
       ),
       child: Stack(
@@ -29,11 +29,13 @@ class _Container2State extends State<Container2> {
               padding: EdgeInsets.all(100),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                //crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'CLEAN ORGANIC AND NATURAL COSMETIC PRODUCTS',style: bheadings),                    
-                  Text('Deal with hyperpigmentation, Beaux skin lightening products are formulated to even out skin tone and restore the skin’s natural colorget even, clear and radiant',style: bheadings),
+                    'CLEAN ORGANIC AND NATURAL COSMETIC PRODUCTS',style: navheadings), 
+                  SizedBox(height: 20,),                  
+                  Text('Deal with hyperpigmentation, Beaux skin lightening products are formulated to',style: subtext),
+                  Text('even out skin tone and restore the skin’s natural colorget even, clear and radiant',style: subtext),
                 ]
               ),
             )

@@ -20,41 +20,49 @@ class _NewsLetterState extends State<NewsLetter> {
             padding: bpadding,
             color: banner2,
             width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height/2.0,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text('SIGN-UP TO THE MPANIES FAN CLUB TODAY'),
+                Text('SIGN-UP TO THE MPANIES FAN CLUB TODAY',style: navheadings),
                 SizedBox(height: 20,),
-                Text('Subscribe to our mailing list to be notified about news, collections, and special offers'),
+                Text('Subscribe to our mailing list to be notified about news, collections, and special offers',style: subtext ),
                 SizedBox(height: 20,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Expanded(
-                      flex: 1,                      
-                        child: TextField(
-                          decoration: InputDecoration(
-                            hintText: 'Enter your email...',
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.orange),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.orange),
+                    Container(
+                      width: MediaQuery.of(context).size.width / 2.5,
+                      child: Expanded(
+                        flex: 1,                      
+                          child: TextField(
+                            decoration: InputDecoration(
+                              hintText: 'Enter your email...',
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.orange),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.orange),
+                              ),
                             ),
                           ),
-                        ),
-                      
-                    ),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.black,
+                        
                       ),
-                      onPressed: () {
-                        // Add your submission logic here
-                      },
-                      child: Text('Submit'),
+                    ),
+                    SizedBox(width: 20,),
+                    Container(
+                      height: 40,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black,
+                        ),
+                        onPressed: () {
+                          // Add your submission logic here
+                        },
+                        child: Text('Submit'),
+                      ),
                     ),
                   ],
                 ),

@@ -8,31 +8,29 @@ class Footer extends StatefulWidget {
   @override
   State<Footer> createState() => _FooterState();
 }
-
 class _FooterState extends State<Footer> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height/3,
+      padding: bpadding,
+      color: Colors.black,
       child: Column(
-        
-          children: [
-    
-            Container(
-              padding: bpadding,
-              color: Colors.black,
-              width: MediaQuery.of(context).size.width,
-              child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,       
+          children: [    
+            Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
+                  
                       Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('STORE', style: fheadings),
+                          SizedBox(height: 20,),
                           Row(
                             children: [
                               Icon(Icons.place, color: Colors. white,),
@@ -47,15 +45,14 @@ class _FooterState extends State<Footer> {
                           )
                         ],
                       ),
-                    ],
-                  ),
-
-                  Row(
-                    children: [
+                    
+                  
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text('REACH US', style: fheadings),
+                          SizedBox(height: 20,),
                           Row(
                             children: [
                               Icon(Icons.phone, color: Colors. white,),
@@ -70,15 +67,12 @@ class _FooterState extends State<Footer> {
                           )
                         ],
                       ),
-                    ],
-                  ),
-
-                  Row(
-                    children: [
+                  
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('INFO', style: fheadings),
+                          SizedBox(height: 20,),
                           Row(
                             children: [
                               Icon(Icons.keyboard_arrow_right, color: Colors. white,),
@@ -93,15 +87,16 @@ class _FooterState extends State<Footer> {
                           )
                         ],
                       ),
-                    ],
-                  ),
+                    
+                  
 
-                  Row(
-                    children: [
+                      Row(
+                      children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('SHARE WITH US', style: fheadings),
+                          SizedBox(height: 20,),
                           Row(
                             children: [
                               
@@ -117,10 +112,11 @@ class _FooterState extends State<Footer> {
 
                 ],
               )
-            )
+            
     
-          ],
-      ),
+          
+      ],
+                  ),
     );
   }
 }

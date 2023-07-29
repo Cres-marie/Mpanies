@@ -12,12 +12,10 @@ class _Container1State extends State<Container1> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top:0),
       child: Column(
-        
-          children: [
-    
+          children: [   
             Container(
+              height: MediaQuery.of(context).size.height/2.0,
               padding: bpadding,
               color: banner2,
               width: MediaQuery.of(context).size.width,
@@ -25,9 +23,12 @@ class _Container1State extends State<Container1> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('BEAUTY DEAL'),
+                  Text('BEAUTY DEAL', style: navheadings,),
                   SizedBox(height: 20,),
-                  Text('Pick your beauty products today. 50% OFF on the most popular cosmetic brands. Order all classy products today!')
+                  Text('Pick your beauty products today. 50% OFF on the most popular cosmetic',
+                  style: subtext ,),
+                  Text('brands. Order all classy products today!',
+                  style: subtext ,)
                 ],
               ),
             )
