@@ -88,7 +88,7 @@ class _FooterState extends State<Footer> {
                           Row(
                             children: [
                               Icon(Icons.keyboard_arrow_right, color: Colors. white,),
-                              
+                              Text('Shipping & Returns', style: fsubheadings,)
                             ],
                           )
                         ],
